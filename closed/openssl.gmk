@@ -63,7 +63,7 @@ endif # windows
 # Identify the desired openssl target configuration.
 OPENSSL_TARGET :=
 ifeq ($(OPENJDK_TARGET_OS), aix)
-  ifeq ($(call isCompiler, openxl), true)
+  ifeq ($(call isCompiler, clang), true)
     OPENSSL_TARGET := aix64-clang
   else ifeq ($(call isCompiler, xlc), true)
     OPENSSL_TARGET := aix64-cc
